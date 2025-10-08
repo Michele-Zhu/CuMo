@@ -79,6 +79,13 @@ pip install -e ".[train]"
 pip install flash-attn --no-build-isolation
 ```
 
+3-bis. If flash-attn is stuck at build process, download a pre-build wheel from:
+```
+# You may need to match Python, Cuda, PyTorch versions. This download is for Python3.10, Cuda 12 and PyTorch 2.1
+wget https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.3/flash_attn-2.7.3+cu12torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
+pip install --no-dependencies --upgrade flash_attn-2.7.3+cu12torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
+```
+
 ## Model Zoo
 The CuMo model weights are open-sourced at Huggingface: 
 | Model | Base LLM | Vision Encoder | MLP Connector | Download |
